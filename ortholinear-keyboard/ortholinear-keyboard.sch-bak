@@ -1770,37 +1770,37 @@ Text GLabel 9850 800  1    50   Input ~ 0
 C11
 Text GLabel 10400 800  1    50   Input ~ 0
 C12
-Text GLabel 2350 1300 2    50   Input ~ 0
-C1
-Text GLabel 2350 1400 2    50   Input ~ 0
-C2
-Text GLabel 2350 1500 2    50   Input ~ 0
-C3
-Text GLabel 2350 1600 2    50   Input ~ 0
-C4
-Text GLabel 2350 1700 2    50   Input ~ 0
-C5
 Text GLabel 2350 1800 2    50   Input ~ 0
+C1
+Text GLabel 2350 1700 2    50   Input ~ 0
+C2
+Text GLabel 2350 1600 2    50   Input ~ 0
+C3
+Text GLabel 2350 1500 2    50   Input ~ 0
+C4
+Text GLabel 2350 1400 2    50   Input ~ 0
+C5
+Text GLabel 2350 1300 2    50   Input ~ 0
 C6
 Text GLabel 2350 1900 2    50   Input ~ 0
 C7
-Text GLabel 2350 2000 2    50   Input ~ 0
-C8
-Text GLabel 2350 2100 2    50   Input ~ 0
-C9
-Text GLabel 2350 2200 2    50   Input ~ 0
-C10
 Text GLabel 2350 2300 2    50   Input ~ 0
+C8
+Text GLabel 2350 2200 2    50   Input ~ 0
+C9
+Text GLabel 2350 2100 2    50   Input ~ 0
+C10
+Text GLabel 2350 2000 2    50   Input ~ 0
 C11
 Text GLabel 2350 2800 2    50   Input ~ 0
 C12
-Text GLabel 1350 2000 0    50   Input ~ 0
+Text GLabel 1350 2800 0    50   Input ~ 0
 R1
-Text GLabel 1350 2100 0    50   Input ~ 0
+Text GLabel 1350 2700 0    50   Input ~ 0
 R2
-Text GLabel 1350 2200 0    50   Input ~ 0
+Text GLabel 1350 2600 0    50   Input ~ 0
 R3
-Text GLabel 1350 2300 0    50   Input ~ 0
+Text GLabel 1350 2500 0    50   Input ~ 0
 R4
 Text GLabel 1350 2400 0    50   Input ~ 0
 R5
@@ -2103,7 +2103,7 @@ U 1 1 60D69A20
 P 2700 7100
 F 0 "P1" H 2700 7392 40  0000 C CNN
 F 1 "TC2030-CTX-Tag-Connect" H 2700 7316 40  0000 C CNN
-F 2 "" H 2700 7100 60  0001 C CNN
+F 2 "otter:TC2030" H 2700 7100 60  0001 C CNN
 F 3 "" H 2700 7100 60  0001 C CNN
 	1    2700 7100
 	1    0    0    -1  
@@ -2317,4 +2317,30 @@ F 3 "" H 5650 6050 50  0001 C CNN
 	1    5650 6050
 	1    0    0    -1  
 $EndComp
+$Comp
+L Power_Protection:SP0502BAHT D61
+U 1 1 60A63512
+P 2950 4450
+F 0 "D61" H 3155 4496 50  0000 L CNN
+F 1 "SP0502BAHT" H 3155 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3175 4400 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 3075 4575 50  0001 C CNN
+	1    2950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60A63C4A
+P 2950 4650
+F 0 "#PWR0101" H 2950 4400 50  0001 C CNN
+F 1 "GND" H 2955 4477 50  0000 C CNN
+F 2 "" H 2950 4650 50  0001 C CNN
+F 3 "" H 2950 4650 50  0001 C CNN
+	1    2950 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 3050 4250 1    50   Input ~ 0
+D-
+Text GLabel 2850 4250 1    50   Input ~ 0
+D+
 $EndSCHEMATC
