@@ -1,5 +1,7 @@
 # ortholinear-keyboard-layout
 
+### WIP
+
 |       |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |   E   |  ESC  |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   | BSPACE|
@@ -7,15 +9,6 @@
 |   C   |       |   A   |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ;:  | ENTER |
 |   B   | SHIFT |   Z   |   X   |   C   |   V   |   B   |   N   |   M   |   <,  |   >.  |   ?/  |   UP  |
 |   A   |  CTRL |  CMD  |  ALT  |   FN  | SPACE | SPACE |  ALT  |  FN1  |       |  LEFT |  DOWN | RIGHT |
-
- - CTL = CTRL
- - SHT = SHIFT
- - BSP = Backspace
- - CMD = Meta, Win, Command, etc?
- - SPC = Space
- - LFT = Left
- - DWN = Down
- - RGT = Right
 
 
 FN1 pressed (WIP)
