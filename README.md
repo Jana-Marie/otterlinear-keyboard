@@ -8,15 +8,6 @@
 |   B   | SHIFT |   Z   |   X   |   C   |   V   |   B   |   N   |   M   |   <,  |   >.  |   ?/  |   UP  |
 |   A   |  CTRL |  CMD  |  ALT  |   FN  | SPACE | SPACE |  ALT  |  FN1  |       |  LEFT |  DOWN | RIGHT |
 
- - CTL = CTRL
- - SHT = SHIFT
- - BSP = Backspace
- - CMD = Meta, Win, Command, etc?
- - SPC = Space
- - LFT = Left
- - DWN = Down
- - RGT = Right
-
 
 FN1 pressed (WIP)
 
