@@ -8,7 +8,7 @@
 |   D   |  TAB  |   Q   |   W   |   E   |   R   |   T   |   Y   |   U   |   I   |   O   |   P   |   |\  |
 |   C   |       |   A   |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ;:  | ENTER |
 |   B   | SHIFT |   Z   |   X   |   C   |   V   |   B   |   N   |   M   |   <,  |   >.  |   ?/  |   UP  |
-|   A   |  CTRL |  CMD  |  ALT  |   FN  | SPACE | SPACE |  ALT  |  FN1  |       |  LEFT |  DOWN | RIGHT |
+|   A   |  CTRL |  CMD  |  ALT  |   FN  | SPACE | SPACE | ALTGR |  FN1  |       |  LEFT |  DOWN | RIGHT |
 
 
 FN1 pressed (WIP)
