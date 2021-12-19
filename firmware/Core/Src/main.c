@@ -1,9 +1,11 @@
 #include "main.h"
 #include "usb_device.h"
+#include "usbd_hid.h"
 
 TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
 DMA_HandleTypeDef hdma_tim1_ch3_up;
+PCD_HandleTypeDef hpcd_USB_FS;
 
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -11,6 +13,23 @@ static void MX_DMA_Init(void);
 static void MX_TIM1_Init(void);
 void check_bootloader(void);
 void run_bootloader(void);
+void append_key(uint8_t key);
+void clear_key_list();
+
+struct key_t{
+    uint8_t id;
+    uint8_t modifier;
+    uint8_t reserved;
+    uint8_t keycode[6];
+} key;
+
+struct keylist_t{
+  uint8_t keycode[6];
+  uint8_t numkeys;
+  key_t usb_key
+  //void (*append)(uint8_t key);
+  //void (*clear)();
+} keylist;// = {.append = append_key, .clear = clear_key_list};
 
 uint16_t drive_map[12] = {
   0b0000000000100000,
@@ -28,7 +47,7 @@ uint16_t drive_map[12] = {
 };
 
 uint16_t receive_map[12] = {};
-uint16_t rec_map[5] = {};
+uint16_t key_map[5] = {};
 
 int main(void)
 {
@@ -39,7 +58,8 @@ int main(void)
   //MX_DMA_Init();
   //MX_TIM1_Init();
   check_bootloader();
-  MX_USB_DEVICE_Init();
+  MX_USB_HID_INIT();
+
   while (1)
   {
     for(uint8_t i = 0; i < 12; i++){
@@ -47,12 +67,42 @@ int main(void)
       HAL_Delay(1);
       receive_map[i] = GPIOB->IDR >> 4;
       for(int k = 0; k < 5; k++){ // map rotated by 90deg
-        rec_map[k] = (rec_map[k] & ~(1ul << i)) | (((receive_map[i] >> k) & 0x01) << i);
+        key_map[k] = (key_map[k] & ~(1ul << i)) | (((receive_map[i] >> k) & 0x01) << i);
       }
       HAL_Delay(1);
     }
+    if(receive_map[5] == 1 && receive_map[6] == 1){
+      key.id = 1;
+      key.keycode[0] = 0x04;
+      uint8_t report[3];
+// report[0]= HID_MEDIA_REPORT;
+// report[1]= 0xEA;
+// report[2]= 0x00;
+// USBD_HID_SendReport(&hUsbDeviceFS, report, 3);
+// HAL_Delay(10);
+//
+// report[0]= HID_MEDIA_REPORT;
+// report[1]= 0x00;
+// report[2]= 0x00;
+// USBD_HID_SendReport(&hUsbDeviceFS, report, 3);
+
+    } else {
+      key.id = 1;
+      key.keycode[0] = 0;
+    }
+    USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t *)&key, sizeof(key));
   }
 }
+
+// ####### Keyhandling #######
+//
+void append_key(uint8_t key){
+  keylist.keycode[keylist.numkeys] = key;
+};
+
+void clear_key_list(){
+
+};
 
 // ####### Bootloader #######
 

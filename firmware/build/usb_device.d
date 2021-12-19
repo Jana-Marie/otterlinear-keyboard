@@ -1,5 +1,4 @@
-build/usb_device.o: USB_DEVICE/App/usb_device.c \
- USB_DEVICE/App/usb_device.h \
+build/usb_device.o: Core/Src/usb_device.c Core/Inc/usb_device.h \
  Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h \
  Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f042x6.h \
  Drivers/CMSIS/Include/core_cm0.h Drivers/CMSIS/Include/cmsis_version.h \
@@ -29,17 +28,16 @@ build/usb_device.o: USB_DEVICE/App/usb_device.c \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h \
+ Core/Inc/usbd_conf.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- USB_DEVICE/App/usbd_desc.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h \
+ Core/Inc/usbd_desc.h Core/Inc/usbd_hid.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 
-USB_DEVICE/App/usb_device.h:
+Core/Inc/usb_device.h:
 
 Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:
 
@@ -103,9 +101,7 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
-USB_DEVICE/Target/usbd_conf.h:
-
-Core/Inc/main.h:
+Core/Inc/usbd_conf.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 
@@ -117,8 +113,8 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
 
-USB_DEVICE/App/usbd_desc.h:
+Core/Inc/usbd_desc.h:
 
-Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h:
+Core/Inc/usbd_hid.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
