@@ -1,22 +1,3 @@
-# ortholinear-keyboard-layout
+# otterlinear-keyboard
 
-### WIP
-
-|       |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|   E   |  ESC  |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   | BSPACE|
-|   D   |  TAB  |   Q   |   W   |   E   |   R   |   T   |   Y   |   U   |   I   |   O   |   P   |   |\  |
-|   C   |       |   A   |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ;:  | ENTER |
-|   B   | SHIFT |   Z   |   X   |   C   |   V   |   B   |   N   |   M   |   <,  |   >.  |   ?/  |   UP  |
-|   A   |  CTRL |  CMD  |  ALT  |   FN  | SPACE | SPACE | ALTGR |  FN1  |       |  LEFT |  DOWN | RIGHT |
-
-
-FN1 pressed (WIP)
-
-|       |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|   E   |  ESC  |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   |  BSP  |
-|   D   |  TAB  |   Q   |   W   |   E   |   R   |   T   |   Y   |   U   |   I   |   {[  |   }]  |   |\  |
-|   C   |       |   A   |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ",  |  ENT  |
-|   B   |  SHT  |   Z   |   X   |   C   |   V   |   B   |   N   |   M   |   <,  |   >.  |   ?/  |   UP  |
-|   A   |  CTL  |  CMD  |  ALT  |   FN  |  SPC  |  SPC  |  ALT  |  FN1  |       |  LFT  |  DWN  |  RGT  |
+Just a smol ortholinear keyboard desgined by an otter for otters. It is built upon an STM32f042, Kailh Choc switches, featuring a Type-C jack and a wooden base. The keyboard measures only 214x84x17mm and has a smol, slim and chic design to fulfill its purpose as tv keyboard for my living room :3
