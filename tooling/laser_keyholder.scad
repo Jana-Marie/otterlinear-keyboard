@@ -6,9 +6,8 @@ text3 = "Design by: Jana Marie Hemsing";
 font = "Liberation Sans";
  
 //%translate([0,50,0])color("DarkTurquoise")cylinder(d=2,h=10);
-
-translate([0,-10*sin($t),0])holder();
-aligner();
+translate([0,-10*sin($t*100),0])holder();
+//aligner();
 
 if(renderCap == true){
     for(i = [-1:2:1]){
@@ -31,7 +30,7 @@ module aligner(){
         union(){
             for(i = [-1:2:1]){
                 translate([10*i,17.5+5,1.5])cube([2.1,5.1,3.1],center=true);
-                translate([(42/2-4)*i,31,1])cylinder(d=6,h=4);
+                translate([(42/2-4)*i,31,1])cylinder(d=6.2,h=4);
             }
             translate([0,26,3.8]) linear_extrude(height = 0.5) {
                 text(text = str(text2), font = font, size = 2, valign = "center", halign = "center");
