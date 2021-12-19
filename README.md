@@ -12,3 +12,6 @@ The board itself can be ordered from JLCPCB with all parts populated (if availab
  - Finish firmware
    - Write keyboard layout mapper
    - find an easy way to map a new layout
+
+![](img/FG7vpsDXMAMAlfk.jpeg)
+![](img/FG7vpoGXIAYDPLb.jpeg)
