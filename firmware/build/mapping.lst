@@ -1,0 +1,49 @@
+ARM GAS  /tmp/ccDS9cGW.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"mapping.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	layer_0
+  16              		.section	.data.layer_0,"aw"
+  17              		.align	2
+  20              	layer_0:
+  21 0000 00008500 		.ascii	"\000\000\205\000,,,\000\000PQO"
+  21      2C2C2C00 
+  21      0050514F 
+  22 000c 001D1B06 		.ascii	"\000\035\033\006\031\005\021\02067R8"
+  22      19051110 
+  22      36375238 
+  23 0018 00041607 		.ascii	"\000\004\026\007\011\012\013\015\016\0173("
+  23      090A0B0D 
+  23      0E0F3328 
+  24 0024 2B141A08 		.ascii	"+\024\032\010\025\027\034\030\014\022\023*"
+  24      15171C18 
+  24      0C12132A 
+  25 0030 291E1F20 		.ascii	")\036\037 !\"#$%&'L"
+  25      21222324 
+  25      2526274C 
+  26              		.text
+  27              	.Letext0:
+  28              		.file 1 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+  29              		.file 2 "Core/Src/mapping.c"
+ARM GAS  /tmp/ccDS9cGW.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 mapping.c
+     /tmp/ccDS9cGW.s:20     .data.layer_0:0000000000000000 layer_0
+     /tmp/ccDS9cGW.s:17     .data.layer_0:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

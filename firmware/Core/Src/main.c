@@ -1,6 +1,7 @@
 #include "main.h"
 #include "usb_device.h"
 #include "usbd_hid.h"
+#include "mapping.h"
 
 TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
@@ -69,28 +70,32 @@ int main(void)
       for(int k = 0; k < 5; k++){ // map rotated by 90deg
         key_map[k] = (key_map[k] & ~(1ul << i)) | (((receive_map[i] >> k) & 0x01) << i);
       }
-      HAL_Delay(1);
+      HAL_Delay(2);
     }
-    if(receive_map[5] == 1 && receive_map[6] == 1){
-      key.id = 1;
-      key.keycode[0] = 0x04;
-      uint8_t report[3];
-// report[0]= HID_MEDIA_REPORT;
-// report[1]= 0xEA;
-// report[2]= 0x00;
-// USBD_HID_SendReport(&hUsbDeviceFS, report, 3);
-// HAL_Delay(10);
-//
-// report[0]= HID_MEDIA_REPORT;
-// report[1]= 0x00;
-// report[2]= 0x00;
-// USBD_HID_SendReport(&hUsbDeviceFS, report, 3);
 
-    } else {
-      key.id = 1;
-      key.keycode[0] = 0;
+    key.id = 1;
+    key.modifier = 0;
+
+    if(key_map[2] == 1) key.modifier |= 0x01;
+    if(key_map[1] == 1) key.modifier |= 0x02;
+    if(key_map[0] == 1) key.modifier |= 0x01;
+    if(key_map[0] >> 3 == 1) key.modifier |= 0x04;
+    if(key_map[0] >> 7 == 1) key.modifier |= 0x04;
+
+    uint8_t keycode_cnt = 0;
+    for(uint8_t i = 0; i <= 4; i++){
+      for(uint8_t k = 0; k <= 12; k++){
+        if(((key_map[i] >> k) & 0x01) == 1){
+          if(layer_0[i][k] != 0x00) {
+            key.keycode[keycode_cnt++] = layer_0[i][k];
+          }
+        }
+      }
     }
+
     USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t *)&key, sizeof(key));
+    keycode_cnt = 0;
+    memset(&key, 0, sizeof key);
   }
 }
 
@@ -145,7 +150,7 @@ void check_bootloader(void){
     receive_map[i] = GPIOB->IDR >> 4;
     HAL_Delay(1);
   }
-  if(receive_map[5] == 3 && receive_map[6] == 3){
+  if(receive_map[4] == 3 && receive_map[5] == 3 && receive_map[6] == 3){
     *((unsigned long *)0x200017FC) = 0xDEADBEEF;
     NVIC_SystemReset();
   }
